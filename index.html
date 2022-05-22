@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;900&family=Radio+Canada:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>구글 검색 API - 검샘 앱</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="offscreen">ScarchMe A Wikipedia Powerd Search Engine</h1>
+      <section class="searchEntry">
+        <h2 class="offscreen">Search Term Entry</h2>
+        <div class="logo" aria-hidden="true">
+          <span class="blue">S</span><span class="red">e</span
+          ><span class="yellow">a</span><span class="blue">r</span
+          ><span class="green">c</span><span class="red">h</span
+          ><span class="blue">M</span><span class="yellow">e</span
+          ><span class="red">!</span>
+        </div>
+
+        <form id="searchBar" class="searchBar">
+          <label for="search" class="offscreen">
+            Enter a search termor phrase
+          </label>
+          <input type="text" id="search" autocomplete="off" />
+
+          <div
+            id="clear"
+            class="button clear none"
+            role="button"
+            tabindex="0"
+            aria-labrl="Clear search terms"
+          >
+            <i class="fa-solid fa-x"></i>
+          </div>
+
+          <button
+            id="searchButton"
+            class="button searchButton"
+            type="submit"
+            aria-label="Submit button"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </section>
+      <section class="results">
+        <h2 class="offscreen">Search Results</h2>
+        <div class="statsBar">
+          <div id="stats" class="stats" aria-live="assertive"></div>
+        </div>
+
+        <div id="srarchResults" class="searchResults padding-16">
+          <div class="resultTitle">
+            <a href="#">Dacheund</a>
+          </div>
+          <div class="resultContents">
+            <div class="resultImage">
+              <img src="./img/download20220101023550.png" alt="Dachsund" />
+            </div>
+            <div class="resultText">
+              <p class="resultDescription">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit esse quo dicta exercitationem expedita quos
+                tempora ex quam culpa quibusdam officia reiciendis explicabo
+                deserunt laudantium beatae modi dolore, sint voluptas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        <span aria-hidden="true">&lt;&lt;</span>powered by
+        <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a>
+        <span aria-hidden="true"> &gt;&gt;</span>
+      </p>
+    </footer>
+  </body>
+</html>
