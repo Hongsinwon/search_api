@@ -14,15 +14,18 @@ main {
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 40px);
 }
 
 footer {
   width: 100%;
-  height: 60px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.2rem;
+  color: #999;
+  background: #eee;
 }
 
 .exclaim {
@@ -37,7 +40,7 @@ footer {
 }
 
 .none {
-  display: none;
+  display: none !important;
 }
 
 .flex {
@@ -67,14 +70,14 @@ footer {
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 40px;
+  padding-top: 2rem;
 }
 
 .logo {
   letter-spacing: -3px;
   font-size: 3rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 /* searchBar - 검색바*/
@@ -106,7 +109,7 @@ input {
 }
 
 i {
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-size: 1.4rem;
   transition: all 0.3s;
 }
@@ -188,7 +191,7 @@ i {
   font-size: 1.8rem;
   line-height: 1.5;
   font-weight: 600;
-  font-family: 'Do Hyeon';
+  font-family: "Do Hyeon";
 
   /* 줄넘김 방기 */
   overflow: hidden;
