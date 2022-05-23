@@ -30,16 +30,23 @@
   <body>
     <main>
       <h1 class="offscreen">ScarchMe A Wikipedia Powerd Search Engine</h1>
+
+      <!-- ★ logo + searchbar section ★ -->
       <section class="searchEntry">
         <h2 class="offscreen">Search Term Entry</h2>
         <div class="logo" aria-hidden="true">
-          <span class="blue">S</span><span class="red">e</span
-          ><span class="yellow">a</span><span class="blue">r</span
-          ><span class="green">c</span><span class="red">h</span
-          ><span class="blue">M</span><span class="yellow">e</span
-          ><span class="red">!</span>
+          <span class="blue">S</span>
+          <span class="red">e</span>
+          <span class="yellow">a</span>
+          <span class="blue">r</span>
+          <span class="green">c</span>
+          <span class="red">h</span>
+          <span class="blue">M</span>
+          <span class="yellow">e</span>
+          <span class="red exclaim">!</span>
         </div>
 
+        <!-- searchbar -->
         <form id="searchBar" class="searchBar">
           <label for="search" class="offscreen">
             Enter a search termor phrase
@@ -48,12 +55,12 @@
 
           <div
             id="clear"
-            class="button clear none"
+            class="none button clear"
             role="button"
             tabindex="0"
-            aria-labrl="Clear search terms"
+            aria-label="Clear search terms"
           >
-            <i class="fa-solid fa-x"></i>
+            <i class="fas fa-times"></i>
           </div>
 
           <button
@@ -66,13 +73,16 @@
           </button>
         </form>
       </section>
+
+      <!-- ★ 검색결과 section ★ -->
       <section class="results">
         <h2 class="offscreen">Search Results</h2>
         <div class="statsBar">
           <div id="stats" class="stats" aria-live="assertive"></div>
         </div>
 
-        <div id="srarchResults" class="searchResults padding-16">
+        <!-- 글 리스트 -->
+        <div id="searchResults" class="searchResults">
           <div class="resultTitle">
             <a href="#">Dacheund</a>
           </div>
@@ -92,6 +102,8 @@
         </div>
       </section>
     </main>
+
+    <!-- ★ footer section ★ -->
     <footer>
       <p>
         <span aria-hidden="true">&lt;&lt;</span>powered by
@@ -99,5 +111,8 @@
         <span aria-hidden="true"> &gt;&gt;</span>
       </p>
     </footer>
+
+    <!-- javascript 연결  -->
+    <script src="./js/main.js" type="module"></script>
   </body>
 </html>

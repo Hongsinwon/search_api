@@ -1,6 +1,6 @@
 @charset 'UTF-8';
 
-/* 기본셋팅 */
+/* 기본셋팅 - 핸드폰 기준으로 진행 width : 480px / 좌우여백 15px*/
 html {
   margin: 0 auto;
   width: 480px;
@@ -27,7 +27,7 @@ footer {
 
 .exclaim {
   display: inline-block;
-  font-size: 2.5rem;
+  font-size: 4rem;
   transform: rotate(12deg);
 }
 
@@ -71,7 +71,7 @@ footer {
 }
 
 .logo {
-  letter-spacing: -0.25px;
+  letter-spacing: -3px;
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -106,7 +106,7 @@ input {
 }
 
 i {
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-size: 1.4rem;
   transition: all 0.3s;
 }
@@ -125,14 +125,17 @@ i {
   color: #fff;
   background-color: #4885ed;
 }
+.clear {
+  display: flex;
+  align-items: center;
+}
 
 .clear i {
-  margin-top: 7.5px;
   margin-right: 10px;
   width: 25px;
   height: 25px;
   line-height: 25px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: bold;
   color: #666;
   border-radius: 50%;
@@ -142,6 +145,7 @@ i {
 .clear:hover i,
 .clear:focus i {
   color: #db3236;
+  background-color: rgba(219, 50, 53, 0.2);
 }
 
 /* results - 검색내용*/
@@ -150,9 +154,9 @@ i {
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
-  max-width: 450px;
+  max-width: 440px;
   width: 100%;
-  margin-top: 2.4rem;
+  margin-top: 2rem;
   /* overflow: hidden; */
 }
 
@@ -162,12 +166,8 @@ i {
 
 .stats {
   color: #999;
-  font-size: 0.75rem;
-}
-
-.searchResults {
-  max-width: 450px;
-  width: 100%;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 
 .resultItem {
@@ -176,14 +176,19 @@ i {
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
+  margin-bottom: 2rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid #eee;
 }
 
 .resultTitle {
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
   width: 100%;
   text-align: left;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: 600;
+  font-family: 'Do Hyeon';
 
   /* 줄넘김 방기 */
   overflow: hidden;
@@ -191,16 +196,27 @@ i {
   text-overflow: ellipsis;
 }
 
+/* 방문한 a태그 생삭변경 */
+.resultTitle a:visited {
+  color: #003796;
+}
+
 .resultContents {
-  max-width: 450px;
+  display: flex;
+}
+
+.resultImage {
+  margin-right: 1rem;
+  max-width: 10vw;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 4fr;
+  height: 80px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .resultImage img {
   width: 100%;
-  padding-right: 1rem;
+  height: 100%;
 }
 
 .resultDescription {
@@ -208,6 +224,7 @@ i {
   line-height: 1.6;
   max-height: 80px;
   color: #555;
+
   /* 3이상일시 줄 자름 */
   overflow: hidden;
   white-space: normal;
