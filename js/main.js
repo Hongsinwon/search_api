@@ -31,8 +31,8 @@ const initApp = () => {
   clear.addEventListener("click", clearSearchText); //  clear box click시 텍스트 삭제 + focus
   clear.addEventListener("keydown", clearPushListener); // 엔터키 or 스페이스시 clear box click이벤트
 
-  const form = document.getElementById("searchBar"); //양식
-  form.addEventListener("submit", submitTheSearch); // 검 submit 함수(검색제출)
+  const form = document.getElementById("searchBar"); // 검색바
+  form.addEventListener("submit", submitTheSearch); // 검색바 submit 함수(검색제출)
 };
 
 // initApp submit 이벤트 시 앱이 실제로 로드될 때
