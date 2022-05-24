@@ -46,6 +46,7 @@ const submitTheSearch = (event) => {
 //프로세스 검색 결과를 정의하거나 검색기능 처리 ===> wikipedia API아 상호작용 => 비동기 함수
 const processTheSearch = async () => {
   clearStatsLine(); // 검색결과 삭제
+  
   const searchTerm = getSearchTerm(); // 공백처리된 검색어
   if (searchTerm === "") return; //검색어가 없으면 return
 
