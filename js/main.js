@@ -45,7 +45,7 @@ const submitTheSearch = (event) => {
   //프로세스 검색 결과를 정의하거나 검색기능 처리
   processTheSearch();
 
-  //포커스를 가져오는 파일 중 하나로 설정 => searchBar.js (setSearchFocus())
+  //input focus(검색창이 비워져있으면 focus상태)
   setSearchFocus();
 };
 
