@@ -21,7 +21,7 @@ document.addEventListener("readystatechange", (event) => {
 });
 
 const initApp = () => {
-  // 텍스트 input에 포커스 설정 => searchBar.js (setSearchFocus())
+  //input focus(검색창이 비워져있으면 focus상태)
   setSearchFocus();
 
   const search = document.getElementById("search");
