@@ -21,8 +21,7 @@ document.addEventListener("readystatechange", (event) => {
 });
 
 const initApp = () => {
-  //input focus(검색창이 비워져있으면 focus상태)
-  setSearchFocus();
+  setSearchFocus(); //input focus(검색창이 비워져있으면 focus상태)
 
   const search = document.getElementById("search");
   const clear = document.getElementById("clear");
@@ -39,14 +38,11 @@ const initApp = () => {
 const submitTheSearch = (event) => {
   event.preventDefault(); //submit 시 새로고침 방지
 
-  // 검색결과 삭제
-  deleteSearchResults();
+  deleteSearchResults();  // 검색결과 삭제
 
-  //프로세스 검색 결과를 정의하거나 검색기능 처리
-  processTheSearch();
+  processTheSearch(); //프로세스 검색 결과를 정의하거나 검색기능 처리
 
-  //input focus(검색창이 비워져있으면 focus상태)
-  setSearchFocus();
+  setSearchFocus();  //input focus(검색창이 비워져있으면 focus상태)
 };
 
 //프로세스 검색 결과를 정의하거나 검색기능 처리 ===> wikipedia API아 상호작용 => 비동기 함수
