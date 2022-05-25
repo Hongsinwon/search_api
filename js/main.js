@@ -1,7 +1,10 @@
-//함수가져오기
-import {setSearchFocus, showClearTextButton, clearSearchText, clearPushListener} from "./searchBar.js"; // clear BTN & input focus
-import {deleteSearchResults, buildSearchResults, clearStatsLine, setStatsLine,} from "./searchResults.js"; // 검색 리스트 출력
-import { getSearchTerm, retrieveSearchResults } from "./dataFunctions.js"; // 검색
+// ★★ 함수가져오기
+// 1. clear BTN & input focus
+import {setSearchFocus, showClearTextButton, clearSearchText, clearPushListener} from "./searchBar.js"; 
+// 2.  검색 리스트 출력
+import {deleteSearchResults, buildSearchResults, clearStatsLine, setStatsLine,} from "./searchResults.js";
+// 3. 검색
+import { getSearchTerm, retrieveSearchResults } from "./dataFunctions.js";
 
 //DOMContentLoaded 전에 DOM을 삽입하거나 수정하기 위한 이벤트 리스너로서의 readystatechange
 document.addEventListener("readystatechange", (event) => {
