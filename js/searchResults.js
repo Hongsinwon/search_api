@@ -1,10 +1,13 @@
 // 검색결과 삭제
 export const deleteSearchResults = () => {
   const parentElement = document.getElementById('searchResults');
+  //Element.lastElementChild 는 읽기 전용 속성은 요소의 마지막 자식 반환 Element , 또는 null 자식 요소가없는 경우.
   let child = parentElement.lastElementChild;
+  
+  //자식이 존재하는 동안 부모요소점 제거 👉 우리가 실별한 해당 컨테이너 내어 모든 요소가 삭제될 때까지 계속 진행
   while (child) {
-    parentElement.removeChild(child);
-    child = parentElement.lastElementChild;
+    parentElement.removeChild(child); //식별한 해당 요소 제거
+    child = parentElement.lastElementChild; //다음자식에 다시 할당
   }
 };
 
