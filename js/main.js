@@ -44,7 +44,7 @@ const submitTheSearch = (event) => {
 const processTheSearch = async () => {
   clearStatsLine(); // input창을 빈 검색창으로 만듬
   
-  const searchTerm = getSearchTerm(); // 공백처리된 검색어
+  const searchTerm = getSearchTerm(); // 검색어 가져오기 👉 공백처리된 검색어
   if (searchTerm === "") return; //검색어가 없으면 return
 
   // 검색어를 배열로 다시 가져오기 => 비동기 대기 프로세스를 시작
