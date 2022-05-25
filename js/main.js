@@ -9,15 +9,16 @@ import {deleteSearchResults, buildSearchResults, clearStatsLine, setStatsLine,} 
 import { getSearchTerm, retrieveSearchResults } from "./dataFunctions.js";
 
 
-//DOMContentLoaded 전에 DOM을 삽입하거나 수정하기 위한 이벤트 리스너로서의 readystatechange
+//DOMContentLoaded 전에 DOM을 삽입하거나 수정하기 위한 이벤트 리스너로서의 readystatechange 👉 준비상태의 이벤트
 document.addEventListener("readystatechange", (event) => {
-  if (event.target.readyState === "complete") {
+  //페이지가 모든 것을 준비했고 앱을 초기화할 준비가 된 다음 initApp() 이벤트 실행 === 호출
+  if (event.target.readyState === "complete") { 
     initApp();
   }
 });
 
 const initApp = () => {
-  setSearchFocus(); //input focus(검색창이 비워져있으면 focus상태)
+  setSearchFocus(); //input focus(검색창에 즉시 focus 설정)
 
   const search = document.getElementById("search");
   const clear = document.getElementById("clear");
@@ -34,9 +35,9 @@ const initApp = () => {
 const submitTheSearch = (event) => {
   event.preventDefault(); //submit 시 새로고침 방지
 
-  deleteSearchResults();  // 검색결과 삭제
-  processTheSearch(); //프로세스 검색 결과를 정의하거나 검색기능 처리
-  setSearchFocus();  //input focus(검색창이 비워져있으면 focus상태)
+  deleteSearchResults();  // 검색리스트 결과 삭제
+  processTheSearch(); //프로세스 검색 결과를 정의하거나 검색기능 처리 (👇👇 function 비동기 함수 👇👇)
+  setSearchFocus();  //input focus(검색창에 즉시 focus 설정)
 };
 
 //프로세스 검색 결과를 정의하거나 검색기능 처리 ===> wikipedia API아 상호작용 => 비동기 함수
