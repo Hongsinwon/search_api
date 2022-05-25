@@ -3,7 +3,7 @@
 [참고 인강] - https://youtu.be/Dk6Wopar10k
 
 
-# wiki API를 이용한 구글 크롬 검색 클론 코딩
+# Wikipedia API를 이용한 구글 검색 클론 코딩
 
 </br>
 
