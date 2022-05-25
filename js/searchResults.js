@@ -80,7 +80,7 @@ export const clearStatsLine = () => {
   document.getElementById('stats').textContent = '';
 };
 
-//검색결과 👉 갯수 안내
+//검색결과 👉 갯수 안내 (resultArray.length === numberOfResults)
 export const setStatsLine = (numberOfResults) => {
   const statLine = document.getElementById('stats');
   if (numberOfResults) {
