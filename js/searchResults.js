@@ -10,6 +10,8 @@ export const deleteSearchResults = () => {
 
 export const buildSearchResults = (resultArray) => {
   // 검색결과를 배열에 전달 결과 배열을 사용하여 호출
+  //forEach() 메서드는 배열에 활용이 가능한 메서드로, 파라미터로 주어진 함수를 배열 요소 각각에 대해 실행하는 메서드이다.
+  //map() 메서드와 거의 비슷하지만 차이점은 따로 return 하는 값이 없다는 점이다.
   resultArray.forEach((result) => {
     const resultItem = creatsResultItem(result); //결과항목 생성 함수
     const resultContents = document.createElement('div'); //결과내용정의
@@ -32,8 +34,10 @@ export const buildSearchResults = (resultArray) => {
 const creatsResultItem = (result) => {
   const resultItem = document.createElement('div');
   resultItem.classList.add('resultItem');
+  
   const resultTitle = document.createElement('div');
   resultTitle.classList.add('resultTitle');
+ 
   const link = document.createElement('a');
   link.href = `https://en.wikipedia.org/?curid=${result.id}`;
   link.textContent = result.title;
@@ -48,6 +52,7 @@ const creatsResultItem = (result) => {
 const createResultImage = (result) => {
   const resultImage = document.createElement('div');
   resultImage.classList.add('resultImage');
+  
   const img = document.createElement('img');
   img.src = result.img;
   img.alt = result.title;
@@ -60,9 +65,11 @@ const createResultImage = (result) => {
 const createResultText = (result) => {
   const resultText = document.createElement('div');
   resultText.classList.add('resultText');
+  
   const resultDescription = document.createElement('p');
   resultDescription.classList.add('resultDescription');
   resultDescription.textContent = result.text;
+  
   resultText.append(resultDescription);
 
   return resultText;
@@ -73,7 +80,7 @@ export const clearStatsLine = () => {
   document.getElementById('stats').textContent = '';
 };
 
-//검색결과
+//검색결과 👉 갯수 안내
 export const setStatsLine = (numberOfResults) => {
   const statLine = document.getElementById('stats');
   if (numberOfResults) {
