@@ -1,17 +1,7 @@
 //함수가져오기
-import {
-  setSearchFocus,
-  showClearTextButton,
-  clearSearchText,
-  clearPushListener,
-} from "./searchBar.js";
-import {
-  deleteSearchResults,
-  buildSearchResults,
-  clearStatsLine,
-  setStatsLine,
-} from "./searchResults.js";
-import { getSearchTerm, retrieveSearchResults } from "./dataFunctions.js";
+import {setSearchFocus, showClearTextButton, clearSearchText, clearPushListener} from "./searchBar.js"; // clear BTN & input focus
+import {deleteSearchResults, buildSearchResults, clearStatsLine, setStatsLine,} from "./searchResults.js"; // 검색 리스트 출력
+import { getSearchTerm, retrieveSearchResults } from "./dataFunctions.js"; // 검색
 
 //DOMContentLoaded 전에 DOM을 삽입하거나 수정하기 위한 이벤트 리스너로서의 readystatechange
 document.addEventListener("readystatechange", (event) => {
