@@ -48,7 +48,7 @@ const processTheSearch = async () => {
   if (searchTerm === "") return; //검색어가 없으면 return
 
   // 검색어를 배열로 다시 가져오기 => 비동기 대기 프로세스를 시작
-  const resultArray = await retrieveSearchResults(searchTerm);
-  if (resultArray.length) buildSearchResults(resultArray); // 결과가 있는 경우
+  const resultArray = await retrieveSearchResults(searchTerm); // 검색어가 있는경우 검색어 API에 전달
+  if (resultArray.length) buildSearchResults(resultArray); // 검색어가 API의 배열로 존재하는 경우 리스트 html 출력
   setStatsLine(resultArray.length); // 검색결과 갯수
 };
