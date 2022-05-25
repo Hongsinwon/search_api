@@ -34,6 +34,23 @@
 
 ##  Problem (문제가 되는 것 + 해결 + 이론 )
 
+1. 로컬에서 CORS policy 관련 에러가 발생하는 이유
+
+>Access to script at 'file:///C:/경로/js/module.js' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https.
 
 
+</br>
 
+🔥 로컬에서 CORS가 발생한 이유.
+
+ ```javascript
+    <script type="module" src="js/module.js"></script>
+ ```
+ 
+ </br>
+ 
+🌟<script type=module>의 특성 
+  
+  [MDN 참고 문서 - https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Modules]
+  
+ > type을 module로 설정한<script> 태그가 포함된 HTML 파일을 로컬에서 로드할 경우 자바스크립트 모듈 보안 요구사항으로 인해 CORS 오류가 발생한다고 합니다. 그 때문에 ajax로 요청한 것임 아님에도 불구하고 CORS 오류가 발생
