@@ -1,3 +1,5 @@
+// main.js에서는 모든 addEventListener을 총괄. 다른 파일들의 함수들을 가져와 실행시킨다.
+
 // ★★ 함수가져오기
 // 1. clear BTN & input focus
 import {setSearchFocus, showClearTextButton, clearSearchText, clearPushListener} from "./searchBar.js"; 
@@ -5,6 +7,7 @@ import {setSearchFocus, showClearTextButton, clearSearchText, clearPushListener}
 import {deleteSearchResults, buildSearchResults, clearStatsLine, setStatsLine,} from "./searchResults.js";
 // 3. 검색
 import { getSearchTerm, retrieveSearchResults } from "./dataFunctions.js";
+
 
 //DOMContentLoaded 전에 DOM을 삽입하거나 수정하기 위한 이벤트 리스너로서의 readystatechange
 document.addEventListener("readystatechange", (event) => {
