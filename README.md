@@ -101,7 +101,7 @@
  ## 완성된 페이지
  
  #### 1. 메인 (검색하지 않은 메인화면)
-![메인](images/main.png)
+![메인](image/main1.png)
 
 #### 2. 메인 (검색을 진행한 메일화면)
-![메인](images/main.png)
+![메인](image/main2.png)
