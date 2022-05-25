@@ -54,3 +54,17 @@
  > [MDN 참고 문서 - https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Modules]
  >
  > type을 module로 설정한<script> 태그가 포함된 HTML 파일을 로컬에서 로드할 경우 자바스크립트 모듈 보안 요구사항으로 인해 CORS 오류가 발생한다고 합니다. 그 때문에 ajax로 요청한 것임 아님에도 불구하고 CORS 오류가 발생
+  
+   </br>
+  
+ ##### 🙌 해결방법 
+  
+  1. 터미널을 켜서 해당 http-server을 전역으로 설치해 줍니다.
+  
+   ```javascript
+   npm install http-server -g
+ ```
+  
+ </br>
+    
+ 2. 
